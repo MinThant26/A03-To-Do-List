@@ -1,0 +1,79 @@
+:root{
+    --first-color: white;
+    --second-color: rgb(234, 234, 234);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    padding: 10px;
+    background-color: var(--second-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+main{
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+main .input-area{
+    display: grid;
+    grid-template-columns: 80% auto;
+    gap: 10px;
+}
+.input-area > *{
+    padding: 5px 10px;
+}
+.input-area button{
+    cursor: pointer;
+}
+main .task-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.task-container .task{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--second-color);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+}
+.task .task-details{
+    display: flex;
+    gap: 10px;
+}
+.task-details input[type="checkbox"]{
+    width: 15px;
+    cursor: pointer;
+}
+.task .task-actions button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.project-info{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate(0);
+    }
+    40%{
+        transform: translate(10px);
+    }
+    100%{
+        transform: translate(-10px);
+    }
+}
